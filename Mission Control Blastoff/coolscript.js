@@ -66,8 +66,4 @@ function initiateLaunch() { //initial button push
     interval = setInterval(launchCountdown, 1000);
     launchStarted = true;
 
-    // window.alert("rocket launched!");
-    // launchButton.style.display = "none";
-    // alreadyLaunched.style.display = "block";
-    // launchTimer.innerHTML = Date.now(); 
 }
