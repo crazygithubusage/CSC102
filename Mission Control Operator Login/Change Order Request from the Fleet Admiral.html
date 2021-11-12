@@ -1,0 +1,69 @@
+<!-- Timothe Faessel -->
+<!DOCTYPE html>
+
+<html>
+
+
+<head>
+    <style>
+        /* get font from google */ @import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800&display=swap');
+        .centered {
+            text-align: center;
+            font-family: 'JetBrains Mono', monospace;
+            display:none;
+        }
+        .centeredhidden {
+            text-align: center;
+            font-family: 'JetBrains Mono', monospace;
+            display:none;
+        }
+        .login {
+            text-align: center;
+            font-family: 'JetBrains Mono', monospace;
+            display:block;
+        }
+    </style>
+    
+
+    <title>UAT Launch Terminal</title>
+
+    <meta charset="UTF-8">
+
+</head>
+
+<body>
+    
+    <div class="login">
+        <h1>UAT Launch Terminal</h1>
+        <img src="uatspace.jpg" alt="UAT Space Logo"/>
+        <form id="loginForm" action="javascript:void(0);" onsubmit="submitLogin();">
+            <input type="text" name="firstname" placeholder="first name" maxlength="20" required id="firstName">
+            <input type="text" name="lastname" placeholder="last name" maxlength="20" required id="lastName">
+            <input type="number" name="badgeid" placeholder="Badge ID" maxlength="3" required id="badgeID">
+            <button type="submit" name="submit">Login</button>
+        </form>
+    </div>
+    <div class="centered">
+        <img src="uatspace.jpg" alt="UAT Space Logo"/>
+        <h1>UAT Launch Terminal</h1>
+        <p id=userDetails></p>
+        <p id="launchText">Press red button to initiate launch sequence.</p>  
+    </div>
+    
+    <div class="centered" id="launchButton">
+          
+        <button onclick="initiateLaunch()">
+            <img src="button.jpg" alt="launch button"/>
+        </button>
+    </div>
+
+    <div class="centeredhidden" id="alreadyLaunched" style="display:none;">
+        <p>Rocket has been launched!</p>
+    </div>
+    <div class="centered">
+        <p id="launchTimer">time to launch: 50 seconds.</p>
+    </div>
+    <script src="coolscript.js"></script>
+</body>
+
+</html>
